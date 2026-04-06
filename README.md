@@ -6,10 +6,11 @@ Type what you want to do — TermAI returns 3 ready-to-run command suggestions. 
 
 ---
 
-## Screenshot
+## Screenshots
 
-<!-- Add a screenshot of the app here -->
-![TermAI Screenshot](docs/screenshot.png)
+| Chat | Settings |
+|------|----------|
+| ![Chat Screen](screens/chatscreen.png) | ![Settings Screen](screens/setting%20screen.png) |
 
 ---
 
