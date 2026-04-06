@@ -28,38 +28,7 @@ Type what you want to do — TermAI returns 3 ready-to-run command suggestions. 
 
 ## Architecture
 
-```
-┌─────────────────────────────────────────────┐
-│                  TermAI                      │
-│                                              │
-│  ┌──────────────────────────────────────┐   │
-│  │          Frontend  (React)           │   │
-│  │                                      │   │
-│  │  TitleBar  ──  theme / settings      │   │
-│  │  Chat      ──  message history       │   │
-│  │  Input     ──  user query            │   │
-│  │  Card      ──  command suggestion    │   │
-│  │  Setup     ──  first-launch wizard   │   │
-│  │  Settings  ──  provider / model      │   │
-│  └──────────────┬───────────────────────┘   │
-│                 │  Wails JS bridge           │
-│  ┌──────────────▼───────────────────────┐   │
-│  │          Backend  (Go)               │   │
-│  │                                      │   │
-│  │  App.Ask()        query → API call   │   │
-│  │  App.SaveConfig() persist settings   │   │
-│  │  App.SaveTheme()  theme toggle       │   │
-│  │  CopyToClipboard() native clipboard  │   │
-│  └──────────────┬───────────────────────┘   │
-│                 │  HTTPS                     │
-│  ┌──────────────▼───────────────────────┐   │
-│  │           AI Provider                │   │
-│  │  Groq  /  OpenAI  /  Anthropic       │   │
-│  └──────────────────────────────────────┘   │
-└─────────────────────────────────────────────┘
-
-Config stored at:  %USERPROFILE%\.config\termai\config.json
-```
+![Architecture](screens/Archi.png)
 
 **Tech stack**
 
